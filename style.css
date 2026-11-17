@@ -348,11 +348,11 @@ section {
 }
 
 .tags span {
-    background: #f1f5f9;
+    background: #0a0923;
     padding: 4px 10px;
     border-radius: 4px;
     font-size: 0.75rem;
-    color: #475569;
+    color: #bbc8d9;
 }
 
 .project-link {
