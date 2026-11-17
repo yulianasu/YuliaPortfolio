@@ -511,6 +511,306 @@ section {
     justify-content: space-between;
 }
 
+/* Другие страницы */
+
+/* Кнопка назад в case*/
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.05); 
+    border: 1px solid rgba(255, 255, 255, 0.15); 
+    border-radius: 10px;
+    color: #ffffff !important; 
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    margin: 20px 0; 
+}
+/* Эффект при наведении мышки */
+.back-btn:hover {
+    background: rgba(139, 92, 246, 0.2); 
+    border-color: #8b5cf6; 
+    transform: translateY(-2px); 
+}
+
+/*Вб*/
+wb-portfolio {
+  --black: #08080b;
+  --black-soft: #111116;
+  --pink: #ff4fa3;
+  --pink-light: #ff9bc9;
+  --white: #f8f6f8;
+  --muted: #98939c;
+
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 82% 8%,
+      rgba(255, 57, 150, .16),
+      transparent 25rem
+    ),
+    radial-gradient(
+      circle at 6% 78%,
+      rgba(123, 52, 255, .12),
+      transparent 25rem
+    ),
+    var(--black);
+  color: var(--white);
+  padding: 110px 24px 90px;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.wb-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.wb-glow {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: .18;
+  pointer-events: none;
+}
+
+.wb-glow-1 {
+  background: #ff198f;
+  top: 5%;
+  right: -160px;
+}
+
+.wb-glow-2 {
+  background: #6328ff;
+  bottom: 12%;
+  left: -180px;
+}
+
+/* Шапка */
+
+.wb-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 38px;
+}
+
+.wb-eyebrow {
+  display: inline-block;
+  color: var(--pink);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.wb-header h1 {
+  margin: 18px 0 0;
+  max-width: 850px;
+  font-size: clamp(44px, 7vw, 92px);
+  line-height: .92;
+  letter-spacing: -.07em;
+  font-weight: 800;
+}
+
+.wb-header h1 em,
+.wb-featured-heading h2 em,
+.wb-footer h2 em {
+  color: var(--pink);
+  font-style: normal;
+}
+
+.wb-header-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.wb-number {
+  color: var(--pink);
+  font-size: 62px;
+  line-height: .8;
+  font-weight: 800;
+  letter-spacing: -.08em;
+}
+
+.wb-header-note p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.wb-intro {
+  max-width: 490px;
+  margin: 0 0 70px auto;
+  border-left: 1px solid var(--pink);
+  padding-left: 20px;
+}
+
+.wb-intro p {
+  margin: 0;
+  color: #c9c4cc;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Карточки */
+
+.wb-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+
+.wb-card {
+  min-width: 0;
+  background: rgba(255, 255, 255, .045);
+  border: 1px solid rgba(255, 255, 255, .11);
+  border-radius: 22px;
+  overflow: hidden;
+  transition: transform .35s ease, border-color .35s ease,
+              background .35s ease;
+}
+
+.wb-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 79, 163, .7);
+  background: rgba(255, 255, 255, .07);
+}
+
+.wb-card-large,
+.wb-card-wide,
+.wb-card-featured {
+  grid-column: span 2;
+}
+
+.wb-image-wrap {
+  position: relative;
+  background: #15151c;
+  padding: 18px;
+}
+
+.wb-image-wrap img {
+  display: block;
+  width: 100%;
+  max-height: 650px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #202027;
+}
+.wb-card-label {
+  position: absolute;
+  top: 34px;
+  left: 34px;
+  padding: 8px 11px;
+  border: 1px solid rgba(255, 255, 255, .3);
+  border-radius: 100px;
+  background: rgba(8, 8, 11,
+62);
+  backdrop-filter: blur(8px);
+  color: white;
+  font-size: 10px;
+  letter-spacing: .12em;
+}
+
+.wb-card-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 24px 25px;
+}
+
+.wb-card-info h2 {
+  margin: 0 0 7px;
+  color: var(--white);
+  font-size: 22px;
+  letter-spacing: -.04em;
+}
+
+.wb-card-info p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.wb-arrow {
+  display: grid;
+  place-items: center;
+  width: 37px;
+  height: 37px;
+  flex: 0 0 37px;
+  border: 1px solid rgba(255, 79, 163, .55);
+  border-radius: 50%;
+  color: var(--pink);
+  font-size: 20px;
+}
+
+/* Dyson-кейс */
+
+.wb-card-featured {
+  padding: 32px;
+  background:
+    linear-gradient(120deg, rgba(255, 56, 157, .16), transparent 47%),
+    rgba(255, 255, 255, .045);
+}
+
+.wb-featured-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.wb-featured-heading h2 {
+  margin: 12px 0 0;
+  font-size: clamp(42px, 6vw, 75px);
+  line-height: .87;
+  letter-spacing: -.07em;
+}
+
+.wb-featured-heading p {
+  max-width: 290px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.dyson-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 13px;
+}
+
+.dyson-gallery img {
+  display: block;
+  width: 100%;
+  border-radius: 13px;
+  background: #16131d;
+  transition: transform .35s ease;
+}
+
+.dyson-gallery img:hover {
+  transform: scale(1.025);
+}
+
+
 /* Адаптивность */
 @media screen and (max-width: 768px) {
 
