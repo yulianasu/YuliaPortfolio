@@ -935,3 +935,47 @@ wb-portfolio {
         box-sizing: border-box !important;
     }
 }
+ .wb-portfolio {
+    padding: 70px 16px;
+  }
+
+  .wb-header {
+    display: block;
+  }
+
+  .wb-header-note {
+    margin-top: 30px;
+  }
+
+  .wb-intro {
+    margin: 45px 0 45px;
+  }
+
+  .wb-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .wb-card-large,
+  .wb-card-wide,
+  .wb-card-featured {
+    grid-column: span 1;
+  }
+
+  .wb-card-featured {
+    padding: 20px;
+  }
+
+  .wb-featured-heading,
+  .wb-footer-content {
+    display: block;
+  }
+
+  .wb-featured-heading p {
+    margin-top: 22px;
+  }
+
+  .dyson-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
