@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Суворова Юлия Александровна | Frontend & 1C Developer</title>
+    <meta name="description" content="Портфолио: Суворова Юлия Александровна. Фронтенд, 1С, Дизайн.">
+    <!-- Стили -->
+    <link rel="stylesheet" href="style.css?v=3">
+    <!-- Шрифты (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="logo"><span>Юлия</span>.Dev</a>
+            <nav class="nav" id="navMenu">
+                <a href="#about" class="nav__link">Обо мне</a>
+                <a href="#skills" class="nav__link">Навыки</a>
+                <a href="#portfolio" class="nav__link">Кейсы</a>
+                <a href="#contact" class="nav__link nav__link--btn">Связаться</a>
+            </nav>
+            <button class="burger" id="burgerBtn" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+          <!-- Главный экран (Hero): Текст слева, длинный код справа -->
+        <section class="hero" id="about">
+            <div class="container hero__container-main">
+                
+                <!-- Левая колонка: Текст -->
+                <div class="hero__content">
+                    <span class="badge">Vibecoding & High-Speed Dev ⚡️</span>
+                    <h1 class="hero__title">Суворова Юлия <span class="gradient-text">Александровна</span></h1>
+                    <p class="hero__subtitle-role">Frontend-разработчик • 1С:Профессионал • UI/UX Дизайнер</p>
+                    <p class="hero__desc">
+                        Создаю адаптивные сайты с использованием современных AI-ассистентов. Ускоряю рутину, понимаю логику кастомных CMS и связываю веб с бизнес-логикой 1С.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="#portfolio" class="btn btn--primary">Смотреть кейсы</a>
+                        <a href="#contact" class="btn btn--outline">Связаться</a>
+                    </div>
+                </div>
+
+                <!-- Правая колонка: Длинный красивый код -->
+                <div class="hero__card">
+                    <div class="code-preview code-preview--long">
+                        <div class="code-preview__header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="filename">profile.js</span>
+                        </div>
+                        <pre><code><span class="keyword">const</span> specialist = {
+  name: <span class="string">"Суворова Юлия Александровна"</span>,
+  role: <span class="string">"Frontend Developer"</span>,
+  speed: <span class="string">"Lightning fast (Vibecoding)"</span>,
+  stack: [
+    <span class="string">"HTML5/CSS3/JS"</span>, 
+    <span class="string">"1С:Предприятие"</span>, 
+    <span class="string">"UI/UX Design"</span>,
+    <span class="string">"Custom CMS Logic"</span>
+  ],
+  aiAssisted: <span class="boolean">true</span>,
+  cmsReady: <span class="boolean">true</span>,
+  certified: <span class="string">"Frontend-junior разработчик"</span>
+};
+
+<span class="keyword">function</span> <span class="function">deployProject</span>() {
+  <span class="keyword">return</span> <span class="string">"Ready for production & enterprise!"</span>;
+}
+
+<span class="keyword">export default</span> specialist;</code></pre>
+                    </div>
+                </div>
+
+            </div>
+        </section> 
+
+        <!-- Блок навыков -->
+        <section class="skills" id="skills">
+            <div class="container">
+                <h2 class="section-title"><span class="gradient-text">Технический</span> стек</h2>
+                <p class="section-subtitle">Навыки на стыке веб-разработки, дизайна и автоматизации</p>
+                <div class="skills__grid">
+                    <div class="skill-card">
+                        <h3>HTML5 / CSS3 / JS</h3>
+                        <p>Семантическая верстка, адаптивность (Flexbox/Grid), кроссбраузерность, современный ES6+ JavaScript.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Vibecoding & AI</h3>
+                        <p>Виртуозное владение AI-ассистентами (Claude, Cursor, ChatGPT) для ускорения рутины и генерации чистого кода.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>1С:Предприятие</h3>
+                        <p>Понимание логики бизнес-процессов, работы с конфигурациями и интеграции данных.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>UI/UX Дизайн</h3>
+                        <p>Опыт проектирования интерфейсов, работы с макетами, подбора палитры и адаптивного визуального оформления.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Портфолио (Кейсы) -->
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <h2 class="section-title">Реальные <span class="gradient-text">кейсы</span></h2>
+                <p class="section-subtitle">Проекты с чистым кодом и интеграцией бизнес-логики</p>
+                
+                <div class="portfolio__grid">
+                    <article class="project-card">
+                        <div class="project-card__img-wrap">
+                            <div class="project-badge">Custom CMS Ready</div>
+                            <div class="mockup-screen"><img src="spb.png" alt="spb"></div>
+                        </div>
+                        <div class="project-card__body">
+                            <h3>Интерьеры с петербургским характером</h3>
+                            <p>Разработка адаптивной верстки многостраничного сайта для студии элитных интерьеров. Проект выполнен в сдержанной премиальной стилистике. Реализована чистая семантическая верстка на HTML5/CSS3, интерактивные элементы интерфейса на JavaScript и подготовка структуры под интеграцию с кастомным PHP-движком (Custom CMS).</p>
+                            <div class="tags">
+                                <span>HTML/CSS</span>
+                                <span>JavaScript</span>
+                                <span>Custom CMS Ready</span>
+                            </div>
+                            <a href="https://yulianasu.github.io/-------------2-/" target="_blank" class="project-link">Открыть живой сайт ↗</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card__img-wrap">
+                            <div class="project-badge">WordPress Ready</div>
+                            <div class="mockup-screen"><img src="baget.png" alt="Baget"></div>
+                        </div>
+                        <div class="project-card__body">
+                            <h3>Хлебная эстетика</h3>
+                            <p>Создание адаптивного сайта-презентации для ремесленной пекарни в трендовом стиле Warm Minimal (журнальная верстка, асимметричные блоки, плавная анимация на JS). Проект полностью адаптирован под CMS WordPress: выполнена кастомизация темы, настроена панель администратора для управления контентом и подключена интерактивная форма обратной связи для B2B-партнеров.</p>
+                            <div class="tags">
+                                <span>WordPress</span>
+                                <span>HTML5/CSS3 JavaScript</span>
+                                <span>UI/UX Design</span>
+                            </div>
+                            <a href="https://yulianasu.github.io/----/" target="_blank" class="project-link">Посмотреть кейс ↗</a>
+                        </div>
+                    </article>
+                </div>
+
+                <p class="section-subtitle"></p>
+                
+                <div class="portfolio__grid">
+                    <article class="project-card">
+                        <div class="project-card__img-wrap">
+                            <div class="project-badge">Storyland / E-commerce</div>
+                            <div class="mockup-screen"><img src="moisait.png" alt="MYsite"></div>
+                        </div>
+                        <div class="project-card__body">
+                            <h3>Сладкая эстетика - Съедобные букеты </h3>
+                            <p>Разработка коммерческого лендинга под ключ для бренда авторских съедобных букетов и клубники в шоколаде. Проект создан с фокусом на высокую конверсию: разработана сочная визуальная концепция, продающая структура каталога, удобная форма заказа подарков и интеграция с мессенджерами для быстрой связи с клиентами.</p>
+                            <div class="tags">
+                                <span>Storyland</span>
+                                <span>UI/UX Дизайн </span>
+                                <span>Продающий лендинг</span>
+                            </div>
+                            <a href="https://dolceestetica.ru" target="_blank" class="project-link">Открыть живой сайт ↗</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card__img-wrap">
+                            <div class="project-badge">JavaScript Arcade Game</div>
+                            <div class="mockup-screen"><img src="Game.png" alt="Cyperpunk Defender"></div>
+                        </div>
+                        <div class="project-card__body">
+                            <h3>Cyberpunk Defender</h3>
+                            <p>Динамичный аркадный шутер на чистом HTML5 Canvas и ES6+ JavaScript. Реализован игровой цикл на 60 FPS, система частиц, процедурная генерация звуков (Web Audio API) и адаптивное управление для ПК и мобильных устройств.</p>
+                            <div class="tags">
+                                <span>HTML5 Canvas</span>
+                                <span>JavaScript</span>
+                                <span>CSS3</span>
+                                <span>Web Audio API</span>
+                            </div>
+                            <a href="https://yulianasu.github.io/cyberpunk/" target="_blank" class="project-link">Посмотреть кейс ↗</a>
+                        </div>
+                    </article>
+                   <a href="case.html" class="button">Смотреть далее</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Контакты -->
+         <!-- Контакты: Фото слева, форма справа -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-title"><span class="gradient-text">Свяжитесь </span> со мной</h2>
+                <p class="section-subtitle">Готова обсудить задачи и пройти тестовое задание</p>
+                
+                <div class="contact__container-new">
+                    
+                    <!-- Слева: Ваша фотография и контакты -->
+                    <div class="contact__photo-box">
+                        <!-- Убедитесь, что фото называется photo.jpg или photo.png -->
+                        <img src="Yulia.png" alt="Суворова Юлия Александровна" class="contact__real-photo">
+                        <h3 class="contact__name">Суворова Юлия</h3>
+                        <p class="contact__role">Frontend & 1C <span class="gradient-text">Developer</span></p>
+                        <div class="contact-details">
+                            <p>📧 <strong>yulianasuvorova@mail.ru</strong></p>
+                            <p>📱 <strong>@yulsu1</strong></p>
+                        </div>
+                    </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" required placeholder="Иван">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-info">Телефон или Telegram</label>
+                        <input type="text" id="contact-info" required placeholder="@username">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" rows="4" placeholder="Привет! У нас есть задача..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Отправить сообщение</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <p>2026 Суворова Юлия Александровна. Все права защищены.</p>
+            <p>Ready for Custom CMS & 1C integration.</p>
+        </div>
+    </footer>
+
+    <!-- Скрипты -->
+    <script src="app.js"></script>
+</body>
+</html>

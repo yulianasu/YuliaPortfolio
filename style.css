@@ -1,0 +1,637 @@
+
+:root {
+    --bg-color: hwb(240 1% 99%);          
+    --card-bg: #030305;           /* Белые чистые карточки */
+    --text-main: #ffffff;         /* Основной текст на синем фоне — белый */
+    --text-card: #bdffe9;         /* Текст внутри белых карточек — темно-синий */
+    --text-muted: #75a3db;        /* Приглушенный светлый текст */
+    --accent: #ffffff;            /* Яркий голубой акцент */
+    --accent-hover: #2f0cad;      /* Цвет при наведении */
+    --border: rgba(255, 255, 255, 0.15); /* Тонкие полупрозрачные границы */
+    --radius: 16px;
+    --gradient-brand: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 50%, #ec4899 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* Контейнеры */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+/* Шапка */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(4, 5, 7, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #06b6d4;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav__link {
+    color: #f7faf9;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav__link:hover {
+    color: #ffffff;
+}
+
+.nav__link--btn {
+    background-color: #bdffe9;
+    color: #0f172a !important;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+}
+
+.nav__link--btn:hover {
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.burger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.burger span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+/* Главный экран (Hero) */
+.hero {
+    padding-top: 140px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero__container-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    width: 100%;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero__title {
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.hero__subtitle-role {
+    font-size: 1.2rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero__desc {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.hero__actions {
+    display: flex;
+    gap: 15px;
+}
+
+.gradient-text {
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* Длинный красивый код справа */
+.code-preview--long {
+    background: #000000;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    font-family: monospace;
+    font-size: 0.85rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.code-preview__header {
+    background: rgba(255,255,255,0.05);
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.dot.red { background: #ef4444; }
+.dot.yellow { background: #f59e0b; }
+.dot.green { background: #10b981; }
+
+.filename {
+    margin-left: 10px;
+    color: #94a3b8;
+    font-size: 0.75rem;
+}
+
+.code-preview pre {
+    padding: 20px;
+    overflow-x: auto;
+    color: #e2e8f0;
+}
+
+.keyword { color: #c084fc; }
+.string { color: #34d399; }
+.boolean { color: #fbbf24; }
+.function { color: #60a5fa; }
+
+/* Секция навыков */
+.section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 50px;
+}
+
+.skills__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.skill-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    color: var(--text-card);
+    transition: transform 0.2s;
+}
+
+.skill-card:hover {
+    transform: translateY(-3px);
+}
+
+.skill-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+    color: var(--text-card);
+}
+
+.skill-card p {
+    color: var(--text-muted);
+}
+
+/* Портфолио */
+.portfolio__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    color: var(--text-card);
+    transition: transform 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+}
+
+.project-card__img-wrap {
+    height: 180px;
+    background: #e2e8f0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--bg-color);
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.mockup-screen {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    color: #0f172a;
+    font-weight: 600;
+    
+}
+
+.project-card .mockup-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: inherit; 
+}
+
+.project-card__body {
+    padding: 30px;
+}
+
+.project-card__body h3 {
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+    color: var(--text-card);
+}
+
+.project-card__body p {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.tags span {
+    background: #f1f5f9;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    color: #475569;
+}
+
+.project-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* Блок контактов с фото слева и формой справа */
+.contact {
+    background: rgba(15, 23, 42, 0.3);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.contact__container-new {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.contact__photo-box {
+    
+    padding: 40px;
+    border-radius: var(--radius);
+    text-align: center;
+    color: var(--text-card);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.contact__real-photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px auto;
+    border: 4px solid #f1f5f9;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact__name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--text-card);
+}
+
+.contact__role {
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    margin-bottom: 8px;
+    color: #475569;
+}
+
+.contact-form {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 40px;
+    border-radius: var(--radius);
+    color: var(--text-card);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-card);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: #000000;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    color: #000000;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn--primary {
+
+        background: var(--gradient-brand);
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 12px !important;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.btn--primary:hover {
+    background-color: var(--accent-hover);
+}
+
+.btn--outline {
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.btn--outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.btn--full {
+    width: 100%;
+}
+
+/* Футер */
+.footer {
+    padding: 40px 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Адаптивность */
+@media screen and (max-width: 768px) {
+
+    /* 1. Общий сброс прокрутки вбок */
+    body, html {
+        width: 100% !important;
+        overflow-x: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* 2. ШАПКА: аккуратная строка, лого слева, меню и кнопка компактно */
+    header, .header {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 10px 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Прячем десктопное меню, оставляем бургер или компактный вид */
+    .nav {
+        display: none !important; /* Если у тебя бургер-меню управляется через JS */
+    }
+
+    /* Кнопка «Связаться» в шапке на мобилке делаем поменьше, чтобы не рвала дизайн */
+    .header .btn, 
+    .header__btn {
+        padding: 8px 14px !important;
+        font-size: 0.85rem !important;
+    }
+
+    /* 3. ГЛАВНЫЙ ЭКРАН (Hero): всё ровно по центру */
+    .hero__container-main {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 20px 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .hero__title {
+        font-size: 2rem !important;
+        width: 100% !important;
+    }
+
+    .hero__description {
+        max-width: 100% !important;
+        margin: 0 auto 20px auto !important;
+        text-align: center !important;
+    }
+
+    .hero__btns {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        gap: 12px !important;
+    }
+
+    .btn {
+        width: 100% !important;
+        max-width: 280px !important;
+        margin: 0 auto !important;
+    }
+
+    /* 4. ВОЗВРАЩАЕМ ТВОЙ ДИЗАЙНЕРСКИЙ КОД (`profile.js`) НА МЕСТО И ЦЕНТРИРУЕМ */
+    .hero__code, 
+    pre, 
+    .profile-code {
+        display: block !important; /* Возвращаем отображение */
+        width: 90% !important;
+        max-width: 350px
+ !important;
+        margin: 20px auto 0 auto !important;
+        box-sizing: border-box !important;
+        font-size: 0.8rem !important; /* Чуть уменьшаем текст, чтобы красиво влез в экран */
+        overflow-x: auto !important;  /* Скролл внутри блока с кодом, если длинная строка */
+    }
+
+    /* 5. КАРТОЧКИ НАВЫКОВ И КЕЙСОВ — ровно в 1 колонку по центру */
+    .skills__grid, 
+    .portfolio__grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+        width: 100% !important;
+        padding: 0 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    .skills__card, 
+    .portfolio__card {
+        width: 100% !important;
+        max-width: 350px !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 6. ИСПРАВЛЯЕМ ФОРМУ (чтобы поля не улетали вбок, а встали друг под другом) */
+    .contact__container-new,
+    .contact__grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 0 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Карточка с формой и блок с контактами (твое фото и почта) */
+    .contact__info,
+    .contact__form-wrapper,
+    form#contactForm {
+        width: 100% !important;
+        max-width: 350px !important;
+        margin: 0 auto 20px auto !important;
+        box-sizing: border-box !important;
+    }
+}
